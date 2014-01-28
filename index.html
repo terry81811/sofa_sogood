@@ -150,22 +150,22 @@ $( "#trigger" )
   .mouseenter(function() {
   	$('#sofasogood').css('z-index', 3001);
   	$('#trigger').css('z-index', 3000);
-	$('#sofasogood').animate({
+	$('#sofasogood').stop().animate({
 	    left: "40%"
-	  }, { duration: 800, queue: false });
-    $("#trigger").animate({
+	  }, { duration: 800, easing: "linear", queue: false });
+    $("#trigger").stop().animate({
 	    left: "35%",
 	    opacity: "0.8"
-    }, { duration: 800, queue: false });
+    }, { duration: 800, easing: "linear", queue: false });
 
   });
 
 //close right side div and set to the origin
 $("#close").click(function() {
-	$('#sofasogood').animate({
+	$('#sofasogood').stop().animate({
 	    left: "65%"
 	  }, { duration: 800, queue: false });
-    $("#trigger").animate({
+    $("#trigger").stop().animate({
 	    left: "70%",
 	    opacity: "0"
     }, { 
